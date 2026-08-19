@@ -1,0 +1,4 @@
+# Python creates this folder automatically when it runs a script.
+# It is machine-generated clutter, not part of the project.
+__pycache__/
+*.pyc

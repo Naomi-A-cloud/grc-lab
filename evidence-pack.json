@@ -1,0 +1,36 @@
+{
+  "control": "CTL-001",
+  "control_statement": "No S3 bucket may be publicly accessible",
+  "layer": "3 - detective check of the live account",
+  "checked_at_utc": "2026-08-19T14:26:47.586600+00:00",
+  "aws_account": "111122223333",
+  "collected_by": "automated check (collect_evidence.py)",
+  "source": "saved snapshot -- NOT a live AWS account, so this is a demonstration and not real audit evidence",
+  "buckets_checked": 3,
+  "buckets_passed": 3,
+  "buckets_failed": 0,
+  "results": [
+    {
+      "bucket": "meridian-clinical-data",
+      "created_by": "terraform",
+      "data_classification": "restricted",
+      "result": "pass",
+      "problems": []
+    },
+    {
+      "bucket": "meridian-reports",
+      "created_by": "terraform",
+      "data_classification": "restricted",
+      "result": "pass",
+      "problems": []
+    },
+    {
+      "bucket": "meridian-temp-incident-20260814",
+      "created_by": "console",
+      "data_classification": "restricted",
+      "result": "pass",
+      "problems": []
+    }
+  ],
+  "fingerprint_sha256": "47d53d434b8b08e4e150679f37d07da998e3e1a4573f97531d7d23585f771dce"
+}

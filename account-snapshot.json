@@ -1,0 +1,50 @@
+{
+  "_what_this_is": "A pretend answer from AWS. In a real job this comes from asking AWS 'list every bucket and tell me its public access settings'. We use a saved copy so you can practise without an AWS account.",
+
+  "collected_from_account": "111122223333",
+  "region": "eu-west-2",
+
+  "buckets": [
+    {
+      "name": "meridian-clinical-data",
+      "created_by": "terraform",
+      "data_classification": "restricted",
+      "public_access_block": {
+        "block_public_acls": true,
+        "block_public_policy": true,
+        "ignore_public_acls": true,
+        "restrict_public_buckets": true
+      },
+      "acl": "private",
+      "policy_allows_anyone": false
+    },
+
+    {
+      "name": "meridian-reports",
+      "created_by": "terraform",
+      "data_classification": "restricted",
+      "public_access_block": {
+        "block_public_acls": true,
+        "block_public_policy": true,
+        "ignore_public_acls": true,
+        "restrict_public_buckets": true
+      },
+      "acl": "private",
+      "policy_allows_anyone": false
+    },
+
+    {
+            "name": "meridian-temp-incident-20260814",
+      "created_by": "console",
+      "data_classification": "restricted",
+      "public_access_block": {
+        "block_public_acls": true,
+        "block_public_policy": true,
+        "ignore_public_acls": true,
+        "restrict_public_buckets": true
+      },
+      "acl": "private",
+      "policy_allows_anyone": false
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "_what_this_is": "A pretend Terraform plan. When Terraform is about to change your cloud, it can write out exactly what it intends to do, as JSON. This one describes changes that would break CTL-001. We use it to prove our checker actually catches problems.",
+
+  "resource_changes": [
+    {
+      "address": "aws_s3_bucket_acl.patient_data",
+      "type": "aws_s3_bucket_acl",
+      "change": {
+        "actions": ["create"],
+        "after": {
+          "acl": "private-read"
+        }
+      }
+    },
+
+    {
+      "address": "aws_s3_bucket_public_access_block.patient_data",
+      "type": "aws_s3_bucket_public_access_block",
+      "change": {
+        "actions": ["create"],
+        "after": {
+          "block_public_acls": true,
+          "block_public_policy": false,
+          "ignore_public_acls": true,
+          "restrict_public_buckets": false
+        }
+      }
+    },
+
+    {
+      "address": "aws_s3_bucket_policy.reports",
+      "type": "aws_s3_bucket_policy",
+      "change": {
+        "actions": ["create"],
+        "after": {
+          "policy": "{\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":\"*\",\"Action\":\"s3:GetObject\",\"Resource\":\"arn:aws:s3:::meridian-reports/*\"}]}"
+        }
+      }
+    },
+
+    {
+      "address": "aws_s3_bucket_acl.old_backups",
+      "type": "aws_s3_bucket_acl",
+      "change": {
+        "actions": ["delete"],
+        "after": null
+      }
+    }
+  ]
+}
