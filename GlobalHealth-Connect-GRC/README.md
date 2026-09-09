@@ -133,7 +133,16 @@ The project was developed using:
 - GitHub
 - Visual Studio Code
 
-The project uses a practical governance approach based on information security and GRC principles.
+The governance approach focuses on:
+
+- Governance structure and accountability
+- Risk management
+- Security policies and documentation
+- Board-level security reporting
+- Security decision-making
+- Governance maturity assessment
+- Compliance monitoring
+- Continuous improvement
 
 ## Key Governance Findings
 
