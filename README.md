@@ -125,3 +125,21 @@ having named them first is the difference between a limitation and a gap.
 3. GitHub Actions, so the checks run on every pull request instead of by hand
 4. Trend reporting across evidence packs, so control effectiveness is visible
    over a period rather than at a point in time
+
+## Linux Security Control Assurance Lab
+
+A practical Linux security monitoring and GRC control assurance project focused on evidence collection, control testing, risk assessment, remediation, and retesting.
+
+**Key areas:**
+- Linux access control and privileged access review
+- Authentication and security log analysis
+- Auditd control testing
+- Lynis security assessment
+- Evidence management
+- ISO/IEC 27001 control mapping
+- Risk register and control assurance matrix
+- Remediation and closure criteria
+
+**Key finding:** Auditd was installed during testing, but its service could not be successfully started and verified in the WSL2 environment. The control was therefore recorded as **Not Verified** rather than falsely marked effective.
+
+[View the project](./Linux-Security-Control-Assurance-Lab/)
